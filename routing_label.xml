@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labelResponse>
+    <consignment key="6471908_CON1">
+        <pieceLabelData>
+            <pieceNumber>1</pieceNumber>
+            <weightDisplay code="25.0" renderInstructions="yes">25.00kg</weightDisplay>
+            <pieceReference><![CDATA[pkg]]></pieceReference>
+            <barcode symbology="128C">1100541554878010103022022297</barcode>
+            <twoDBarcode symbology="pdf417">
+                <![CDATA[541554878|541554878||1|999377|Apps Associates|C/O CONAKER EQUIPMENT LTD|ATHERSTONE|CV9 2ry|GB||vathsalya|Mexikorig 2|HAMBURG|22297|DE|200|EX|D||||||||N|||pkg|1|25.0|1.6387064E-5|N|23 Mar 2020|15:32:13]]></twoDBarcode>
+        </pieceLabelData>
+        <consignmentLabelData>
+            <consignmentNumber>541554878</consignmentNumber>
+            <sender>
+                <name><![CDATA[Apps Associates]]></name>
+                <addressLine1><![CDATA[C/O CONAKER EQUIPMENT LTD]]></addressLine1>
+                <town><![CDATA[ATHERSTONE]]></town>
+                <province><![CDATA[WA]]></province>
+                <postcode><![CDATA[CV9 2ry]]></postcode>
+                <country><![CDATA[GB]]></country>
+            </sender>
+            <delivery>
+                <name><![CDATA[vathsalya]]></name>
+                <addressLine1><![CDATA[Mexikorig 2]]></addressLine1>
+                <town><![CDATA[HAMBURG]]></town>
+                <province><![CDATA[HH]]></province>
+                <postcode><![CDATA[22297]]></postcode>
+                <country><![CDATA[DE]]></country>
+            </delivery>
+            <account>
+                <accountNumber>999377</accountNumber>
+                <accountCountry>DE</accountCountry>
+            </account>
+            <totalNumberOfPieces>1</totalNumberOfPieces>
+            <product id="EX">Express</product>
+            <collectionDate>2020-03-23</collectionDate>
+            <marketDisplay code="2" renderInstructions="yes"><![CDATA[INT]]></marketDisplay>
+            <transportDisplay code="1" renderInstructions="yes"><![CDATA[AIR]]></transportDisplay>
+            <freeCirculationDisplay code="" renderInstructions="highlighted"><![CDATA[C]]></freeCirculationDisplay>
+            <sortSplitText><![CDATA[2]]></sortSplitText>
+            <xrayDisplay code="" renderInstructions="no"/>
+            <originDepot>
+                <depotCode>CVT</depotCode>
+            </originDepot>
+            <transitDepots>
+                <transitDepot>
+                    <depotCode>EMA</depotCode>
+                </transitDepot>
+                <sortDepot>
+                    <depotCode>LGG</depotCode>
+                    <sortCellIndicator code="" renderInstructions="yes">2</sortCellIndicator>
+                </sortDepot>
+                <transitDepot>
+                    <depotCode>HAJ</depotCode>
+                </transitDepot>
+            </transitDepots>
+            <destinationDepot>
+                <depotCode>HAM</depotCode>
+                <dueDayOfMonth>24</dueDayOfMonth>
+                <dueDate>2020-03-24</dueDate>
+            </destinationDepot>
+            <microzone code="" renderInstructions="no"/>
+            <clusterCode>6B</clusterCode>
+            <legalComments></legalComments>
+            <cashAmount code="0.0" renderInstructions="no"/>
+            <bulkShipment code="" renderInstructions="no"/>
+        </consignmentLabelData>
+    </consignment>
+</labelResponse>

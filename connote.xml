@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><?xml-stylesheet href="https://express.tnt.com/expresswebservices-website/stylesheets/HTMLConsignmentNoteRenderer.xsl" type="text/xsl"?>
+<CONSIGNMENTBATCH>
+    <BARCODEURL>/barbecue/barcode?type=code39&amp;height=70&amp;width=1&amp;data=</BARCODEURL>
+    <HOST>https://express.tnt.com</HOST>
+    <IMAGESDIR>/expresswebservices-website/rendering/images</IMAGESDIR>
+    <CONSIGNMENT originCountry="GB" marketType="INTERNATIONAL">
+        <HEADER last="true">
+            <SHIPMENTDATE>24/03/2020</SHIPMENTDATE>
+            <SENDER>
+                <COMPANYNAME><![CDATA[Apps Associates]]></COMPANYNAME>
+                <STREETADDRESS1><![CDATA[C/O CONAKER EQUIPMENT LTD]]></STREETADDRESS1>
+                <CITY><![CDATA[Atherstone]]></CITY>
+                <PROVINCE><![CDATA[WA]]></PROVINCE>
+                <POSTCODE>CV9 2ry</POSTCODE>
+                <COUNTRY>UNITED KINGDOM</COUNTRY>
+                <CONTACTNAME><![CDATA[Able, Steven John]]></CONTACTNAME>
+                <CONTACTDIALCODE>8801476</CONTACTDIALCODE>
+                <CONTACTTELEPHONE>099</CONTACTTELEPHONE>
+                <ACCOUNT>999377</ACCOUNT>
+            </SENDER>
+            <COLLECTION/>
+            <CARRIAGEFORWARD>N</CARRIAGEFORWARD>
+        </HEADER>
+        <RECEIVER>
+            <COMPANYNAME><![CDATA[A. C. Networks]]></COMPANYNAME>
+            <STREETADDRESS1><![CDATA[Mexikorig 2]]></STREETADDRESS1>
+            <CITY><![CDATA[Hamburg]]></CITY>
+            <PROVINCE><![CDATA[HH]]></PROVINCE>
+            <POSTCODE>22297</POSTCODE>
+            <COUNTRY>GERMANY</COUNTRY>
+            <CONTACTNAME><![CDATA[vathsalya]]></CONTACTNAME>
+            <CONTACTDIALCODE>1234567</CONTACTDIALCODE>
+            <CONTACTTELEPHONE>890</CONTACTTELEPHONE>
+        </RECEIVER>
+        <TOTALVOLUME units="m3">0.001</TOTALVOLUME>
+        <TOTALWEIGHT units="kg">25.00</TOTALWEIGHT>
+        <CONSIGNMENTTYPE>D</CONSIGNMENTTYPE>
+        <CONNUMBER>GE541554878GB</CONNUMBER>
+        <SERVICE>15D Express</SERVICE>
+        <TOTALITEMS>1</TOTALITEMS>
+        <GOODSVALUE>1599.00</GOODSVALUE>
+        <DELIVERYINST><![CDATA[Deliver]]></DELIVERYINST>
+        <OPTION1></OPTION1>
+        <OPTION2></OPTION2>
+        <OPTION3></OPTION3>
+        <OPTION4></OPTION4>
+        <OPTION5></OPTION5>
+        <DANGEROUSGOODS>N</DANGEROUSGOODS>
+        <CURRENCY>USD</CURRENCY>
+        <PAYMENTIND>S</PAYMENTIND>
+        <CONREF>6471908</CONREF>
+    </CONSIGNMENT>
+</CONSIGNMENTBATCH>
