@@ -16,11 +16,15 @@ output = open(args.output, 'w')
 bean = open(args.bean, 'w')
 
 queue = [root]
+leaves = []
 
 while len(queue):
     node = queue.pop(0)
     for child in node:
         if len(child) == 0:
-            output.write(child.tag + '\n')
+            leaves.append((node.tag, child.tag))
         else:
             queue.append(child)
+
+output.close()
+bean.close()
