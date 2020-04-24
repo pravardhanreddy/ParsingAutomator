@@ -40,8 +40,10 @@ while len(queue):
             queue.append(child)
         if len(child.attrib) != 0:
             for key, value in child.attrib.items():
-                attrib_decl.append('Node ' + child.tag.lower() + key.capitalize() + ' = root.selectSingleNode("' +
-                                   child_path + '").getAttributes().getNamedItem("' + key + '")\n')
+                attrib_decl.append('Node ' + child.tag.lower() + key.capitalize() + 'Node = root.selectSingleNode("' +
+                                   child_path + '").getAttributes().getNamedItem("' + key + '");\n')
+                attribs.append(args.prefix + '.set' + child.tag.lower() + key.capitalize() + '(' +
+                               child.tag.lower() + key.capitalize() + 'Node.getNodeValue());\n')
 
 node_decl = list(dict.fromkeys(node_decl))
 for n in node_decl:
@@ -50,6 +52,11 @@ output.write('\n\n')
 
 attrib_decl = list(dict.fromkeys(attrib_decl))
 for n in attrib_decl:
+    output.write(n)
+output.write('\n\n')
+
+attribs = list(dict.fromkeys(attribs))
+for n in attribs:
     output.write(n)
 output.write('\n\n')
 
