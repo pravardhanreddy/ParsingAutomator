@@ -18,16 +18,27 @@ root = tree.getroot()
 output = open(args.output, 'w')
 bean = open(args.bean, 'w')
 
+bad_chars = ['[', ']', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 queue = [root]
 leaves = []
+node_decl = []
 
 while len(queue):
     node = queue.pop(0)
+    path = tree.getpath(node)
+    for char in bad_chars:
+        path = path.replace(char, '')
     for child in node:
         if len(child) == 0:
             leaves.append((node.tag, child.tag))
+            node_decl.append('Node ' + node.tag.lower() + 'Node = root.selectSingleNode("' + path + '");\n')
         else:
             queue.append(child)
+
+node_decl = list(dict.fromkeys(node_decl))
+for n in node_decl:
+    output.write(n)
+output.write('\n\n')
 
 count_child = [y for (x, y) in leaves]
 leaves = list(dict.fromkeys(leaves))
