@@ -1,7 +1,6 @@
 import argparse
 from lxml import etree
 
-
 parser = argparse.ArgumentParser()
 parser.add_argument('-i', '--input', action='store', required=True,
                     help="Specifies the input file")
@@ -22,6 +21,8 @@ bad_chars = ['[', ']', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 queue = [root]
 leaves = []
 node_decl = []
+attribs = []
+attrib_decl = []
 
 while len(queue):
     node = queue.pop(0)
@@ -29,14 +30,26 @@ while len(queue):
     for char in bad_chars:
         path = path.replace(char, '')
     for child in node:
+        child_path = tree.getpath(child)
+        for char in bad_chars:
+            child_path = child_path.replace(char, '')
         if len(child) == 0:
             leaves.append((node.tag, child.tag))
             node_decl.append('Node ' + node.tag.lower() + 'Node = root.selectSingleNode("' + path + '");\n')
         else:
             queue.append(child)
+        if len(child.attrib) != 0:
+            for key, value in child.attrib.items():
+                attrib_decl.append('Node ' + child.tag.lower() + key.capitalize() + ' = root.selectSingleNode("' +
+                                   child_path + '").getAttributes().getNamedItem("' + key + '")\n')
 
 node_decl = list(dict.fromkeys(node_decl))
 for n in node_decl:
+    output.write(n)
+output.write('\n\n')
+
+attrib_decl = list(dict.fromkeys(attrib_decl))
+for n in attrib_decl:
     output.write(n)
 output.write('\n\n')
 
