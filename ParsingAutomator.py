@@ -29,10 +29,12 @@ while len(queue):
     path = tree.getpath(node)
     for char in bad_chars:
         path = path.replace(char, '')
+
     for child in node:
         child_path = tree.getpath(child)
         for char in bad_chars:
             child_path = child_path.replace(char, '')
+
         if len(child) == 0:
             leaves.append((node.tag, child.tag))
             node_decl.append('Node ' + node.tag.lower() + 'Node = root.selectSingleNode("' + path + '");\n')
