@@ -44,8 +44,11 @@ while len(queue):
             for key, value in child.attrib.items():
                 attrib_decl.append('Node ' + child.tag.lower() + key.capitalize() + 'Node = root.selectSingleNode("' +
                                    child_path + '").getAttributes().getNamedItem("' + key + '");\n')
-                attribs.append(args.prefix + '.set' + child.tag.lower() + key.capitalize() + '(' +
+                attribs.append(args.prefix + '.set' + child.tag.capitalize() + key.capitalize() + '(' +
                                child.tag.lower() + key.capitalize() + 'Node.getNodeValue());\n')
+                bean.write('private String ' + child.tag.lower() + key.capitalize() + ';\n')
+
+bean.write('\n')
 
 node_decl = list(dict.fromkeys(node_decl))
 for n in node_decl:
@@ -70,10 +73,12 @@ for p, c in leaves:
         output.write(args.prefix + '.set' + p.capitalize() + c.capitalize() +
                      '(nullStrToSpc(AascXmlParser.getValue((Element) ' + p.lower() +
                      'Node, "' + c + '")));\n')
+        bean.write('private String ' + p.lower() + c.capitalize() + ';\n')
     else:
         output.write(args.prefix + '.set' + c.capitalize() +
                      '(nullStrToSpc(AascXmlParser.getValue((Element) ' + p.lower() +
                      'Node, "' + c + '")));\n')
+        bean.write('private String ' + c.lower() + ';\n')
 
 output.close()
 bean.close()
